@@ -1,51 +1,89 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # agentsgt-lifestyle-ai
  aplicación web desarrollada en React y TypeScript que ayuda a los usuarios a crear un plan de estilo de vida personalizado. Utilizando inteligencia artificial, genera planes en áreas como desarrollo profesional, entrenamiento físico, hobbies, nutrición y más, adaptándolos según la retroalimentación del usuario.
 =======
 # Getting Started with Create React App
+=======
+# AgentsGT Lifestyle AI 🎨🧑‍💻🏋️‍♀️
+>>>>>>> 1c1ee1e ( UI FIRST version, file strucutre, with first ui version.)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web desarrollada en **React + TypeScript** que genera planes de estilo de vida personalizados con la ayuda de **modelos de inteligencia artificial**.  
 
-## Available Scripts
+La app crea un plan integral – profesional, entrenamiento, hobbies, nutrición y más – y permite al usuario dar retroalimentación para tener mejor el resultado en el plan hasta que quede a su medida.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Generación automática** de planes usando OpenAI.  
+- **Feedback loop**: el usuario calibra el plan y el modelo lo ajusta en tiempo real.  
+- UI clara y responsiva utilizando Tailwindcss.  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Demo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠️ Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- React (Create React App)  
+- TypeScript  
+- TailwindCSS  
+- Axios (llamadas HTTP)  
+- OpenAI SDK
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📂 Estructura del proyecto (resumida)
 
-### `npm run eject`
+src/
+├─ assets/         # imágenes, íconos
+├─ components/     # UI reutilizable
+├─ pages/          # vistas (Home, Feedback)
+├─ services/       # llamadas a IA y otras APIs
+├─ types/          # interfaces & tipos
+├─ utils/          # helpers genéricos
+└─ constants/      # textos, enums, etc.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚡ Ejecucion
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# 1. Clona el repo
+git clone https://github.com/AgentsGT/agentsgt-lifestyle-ai.git
+cd agentsgt-lifestyle-ai
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# 2. Instala dependencias
+npm install
 
-## Learn More
+# 3. Prepara tus variables de entorno
+cp .env.example .env                # y completa los valores
+# OPENAI_API_KEY=...
+# DEEPSEEK_API_KEY=...
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 4. Corre la app en local
+npm start
 
+<<<<<<< HEAD
 To learn React, check out the [React documentation](https://reactjs.org/).
 >>>>>>> aa1a8b9 (Initialize project using Create React App)
+=======
+
+## 🤝 Contribuir
+	1.	Haz un fork.
+	2.	Crea una rama (git checkout -b feature/mi-feature).
+	3.	Commit & push (git commit -m "feat: mi feature").
+	4.	Abre un Pull Request.
+
+
+#Marca
+
+| Elemento                  | Nombre                      | Notas                                  |
+|:---------------------------|:----------------------------|:---------------------------------------|
+| Nombre humano amigable      | LISA                        | Tu acompañante de estilo de vida       |
+| Nombre corto técnico        | LISA AI                     | Para definir el motor IA               |
+| Definición de marca         | Lifestyle Intelligence Support Assistant | Una IA personal para tu mejor vida |
+>>>>>>> 1c1ee1e ( UI FIRST version, file strucutre, with first ui version.)
