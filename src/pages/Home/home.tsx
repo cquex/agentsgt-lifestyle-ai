@@ -211,7 +211,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -241,7 +240,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Color Palette Section */}
         <section id="color-palette" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -270,7 +268,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 2 - Azul Medio */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-secondary"></div>
                 <div className="p-4">
@@ -280,7 +277,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 3 - Azul Claro */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-blue-100"></div>
                 <div className="p-4">
@@ -290,7 +286,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 4 - Azul Pálido */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-blue-50"></div>
                 <div className="p-4">
@@ -300,7 +295,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 5 - Blanco */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-white"></div>
                 <div className="p-4">
@@ -310,7 +304,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 6 - Gris Claro */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-gray-50"></div>
                 <div className="p-4">
@@ -320,7 +313,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 7 - Gris Medio */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-gray-500"></div>
                 <div className="p-4">
@@ -330,7 +322,6 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Color 8 - Gris Oscuro */}
               <div className="flex flex-col overflow-hidden rounded-lg border">
                 <div className="h-32 bg-gray-800"></div>
                 <div className="p-4">

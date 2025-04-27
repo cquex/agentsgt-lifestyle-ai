@@ -21,20 +21,20 @@ module.exports = {
         mono: ["Menlo", "Monaco", "Courier New", "monospace"]
       },
       colors: {
-        primary: "#004E64", // tu Pacific Cyan
-        secondary: "#AEC3B0", // un gris suave (slate-500)
-        success: "#22C55E", // verde
-        warning: "#EAB308", // ámbar
-        error: "#DC2626", // rojo
-        dark: "#1E293B", // gris oscuro
+        primary: "#004E64",
+        secondary: "#AEC3B0",
+        success: "#22C55E",
+        warning: "#EAB308",
+        error: "#DC2626",
+        dark: "#1E293B",
         light: "#F9FAFB",
         surface: {
-          light: "#F9FAFB", // fondo claro
-          dark: "#1E293B" // fondo oscuro
+          light: "#F9FAFB",
+          dark: "#1E293B"
         }
       }
     }
   },
-  darkMode: "class", // si quieres modo oscuro
+  darkMode: "class",
   plugins: []
 };

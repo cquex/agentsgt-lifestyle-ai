@@ -1,26 +1,21 @@
+// src/components/Chat.tsx
+
 "use client";
 
-import type React from "react";
 import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "components/Button";
 import Input from "components/Input";
 import { Send, User } from "components/icons";
+import { createChatService } from "services/serviceFactory";
+import type { Message as ChatMessage } from "services/ChatService";
 
-interface Message {
-  role: "user" | "assistant";
-  content: string;
-}
+const chatService = createChatService();
 
 const ChatPage: React.FC = () => {
   const [input, setInput] = useState("");
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      role: "assistant",
-      content:
-        "Hola, soy LISA AI, tu asistente inteligente. ¿En qué puedo ayudarte hoy?"
-    }
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -28,51 +23,49 @@ const ChatPage: React.FC = () => {
   };
 
   useEffect(() => {
+    (async () => {
+      try {
+        const history = await chatService.getMessages();
+        setMessages(history);
+      } catch (error) {
+        console.error("Error cargando mensajes:", error);
+      }
+    })();
+  }, []);
+
+  useEffect(() => {
     scrollToBottom();
   }, [messages]);
 
-  // Scroll to bottom on initial load
-  useEffect(() => {
-    setTimeout(() => {
-      scrollToBottom();
-    }, 100);
-  }, []);
-
-  const handleSendMessage = (e: React.FormEvent) => {
+  const handleSendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!input.trim()) return;
 
-    // Add user message
-    const userMessage: Message = {
+    const userMessage: ChatMessage = {
       role: "user",
       content: input
     };
 
-    // Simulate assistant response
-    const assistantResponses = [
-      "Entiendo lo que necesitas. Puedo ayudarte a organizar eso de manera eficiente.",
-      "Excelente elección. Vamos a diseñar un plan personalizado para ti.",
-      "Basado en tus preferencias, te recomendaría empezar con pequeños cambios diarios.",
-      "He analizado tus patrones y tengo algunas sugerencias que podrían funcionar bien para ti.",
-      "Vamos a trabajar juntos para lograr un estilo de vida más equilibrado y pleno."
-    ];
-
-    const randomResponse =
-      assistantResponses[Math.floor(Math.random() * assistantResponses.length)];
-
-    const assistantMessage: Message = {
-      role: "assistant",
-      content: randomResponse
-    };
-
-    setMessages([...messages, userMessage, assistantMessage]);
+    setMessages((prev) => [...prev, userMessage]);
     setInput("");
+    setLoading(true);
+
+    try {
+      await chatService.sendMessage(userMessage.content);
+      const updatedMessages = await chatService.getMessages();
+      setMessages(updatedMessages);
+    } catch (error) {
+      console.error("Error al enviar o recibir mensaje:", error);
+      alert("Hubo un problema enviando o recibiendo tu mensaje.");
+    } finally {
+      setLoading(false);
+      scrollToBottom();
+    }
   };
 
   return (
     <div className="flex flex-col h-screen overflow-hidden">
-      {/* Header */}
       <header className="border-b bg-white z-10 flex-shrink-0">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <Link to="/" className="flex items-center gap-2">
@@ -86,7 +79,6 @@ const ChatPage: React.FC = () => {
         </div>
       </header>
 
-      {/* Main content */}
       <main className="flex-1 flex flex-col overflow-hidden">
         <div className="flex-1 overflow-y-auto p-4 md:p-6 max-w-4xl mx-auto w-full">
           <div className="space-y-4">
@@ -123,7 +115,6 @@ const ChatPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Message input form - fixed at bottom */}
         <div className="border-t bg-white p-4 md:p-6 max-w-4xl mx-auto w-full flex-shrink-0">
           <form onSubmit={handleSendMessage} className="flex gap-2">
             <Input
@@ -131,8 +122,9 @@ const ChatPage: React.FC = () => {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Escribe tu mensaje..."
               className="flex-1"
+              disabled={loading}
             />
-            <Button type="submit">
+            <Button type="submit" disabled={loading}>
               <Send className="h-4 w-4" />
             </Button>
           </form>

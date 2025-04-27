@@ -55,8 +55,7 @@ npm install
 
 # 3. Prepara tus variables de entorno
 cp .env.example .env                # y completa los valores
-# OPENAI_API_KEY=...
-# DEEPSEEK_API_KEY=...
+# REACT_OPENAI_API_KEY=... 
 
 # 4. Corre la app en local
 npm start
