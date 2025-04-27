@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # agentsgt-lifestyle-ai
- aplicación web desarrollada en React y TypeScript que ayuda a los usuarios a crear un plan de estilo de vida personalizado. Utilizando inteligencia artificial, genera planes en áreas como desarrollo profesional, entrenamiento físico, hobbies, nutrición y más, adaptándolos según la retroalimentación del usuario.
-=======
-# Getting Started with Create React App
-=======
-# AgentsGT Lifestyle AI 🎨🧑‍💻🏋️‍♀️
->>>>>>> 1c1ee1e ( UI FIRST version, file strucutre, with first ui version.)
 
-Aplicación web desarrollada en **React + TypeScript** que genera planes de estilo de vida personalizados con la ayuda de **modelos de inteligencia artificial**.  
+# aplicación web desarrollada en React y TypeScript que ayuda a los usuarios a crear un plan de estilo de vida personalizado. Utilizando inteligencia artificial, genera planes en áreas como desarrollo profesional, entrenamiento físico, hobbies, nutrición y más, adaptándolos según la retroalimentación del usuario.
+
+# Getting Started with Create React App
+
+=======
+
+# AgentsGT Lifestyle AI 🎨🧑‍💻🏋️‍♀️
+
+Aplicación web desarrollada en **React + TypeScript** que genera planes de estilo de vida personalizados con la ayuda de **modelos de inteligencia artificial**.
 
 La app crea un plan integral – profesional, entrenamiento, hobbies, nutrición y más – y permite al usuario dar retroalimentación para tener mejor el resultado en el plan hasta que quede a su medida.
 
@@ -16,9 +16,9 @@ La app crea un plan integral – profesional, entrenamiento, hobbies, nutrición
 
 ## ✨ Características
 
-- **Generación automática** de planes usando OpenAI.  
-- **Feedback loop**: el usuario calibra el plan y el modelo lo ajusta en tiempo real.  
-- UI clara y responsiva utilizando Tailwindcss.  
+- **Generación automática** de planes usando OpenAI.
+- **Feedback loop**: el usuario calibra el plan y el modelo lo ajusta en tiempo real.
+- UI clara y responsiva utilizando Tailwindcss.
 
 ---
 
@@ -28,10 +28,10 @@ La app crea un plan integral – profesional, entrenamiento, hobbies, nutrición
 
 ## 🛠️ Stack
 
-- React (Create React App)  
-- TypeScript  
-- TailwindCSS  
-- Axios (llamadas HTTP)  
+- React (Create React App)
+- TypeScript
+- TailwindCSS
+- Axios (llamadas HTTP)
 - OpenAI SDK
 
 ---
@@ -39,13 +39,13 @@ La app crea un plan integral – profesional, entrenamiento, hobbies, nutrición
 ## 📂 Estructura del proyecto (resumida)
 
 src/
-├─ assets/         # imágenes, íconos
-├─ components/     # UI reutilizable
-├─ pages/          # vistas (Home, Feedback)
-├─ services/       # llamadas a IA y otras APIs
-├─ types/          # interfaces & tipos
-├─ utils/          # helpers genéricos
-└─ constants/      # textos, enums, etc.
+├─ assets/ # imágenes, íconos
+├─ components/ # UI reutilizable
+├─ pages/ # vistas (Home, Feedback)
+├─ services/ # llamadas a IA y otras APIs
+├─ types/ # interfaces & tipos
+├─ utils/ # helpers genéricos
+└─ constants/ # textos, enums, etc.
 
 ---
 
@@ -67,9 +67,7 @@ cp .env.example .env                # y completa los valores
 # 4. Corre la app en local
 npm start
 
-<<<<<<< HEAD
 To learn React, check out the [React documentation](https://reactjs.org/).
->>>>>>> aa1a8b9 (Initialize project using Create React App)
 =======
 
 ## 🤝 Contribuir
@@ -86,4 +84,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 | Nombre humano amigable      | LISA                        | Tu acompañante de estilo de vida       |
 | Nombre corto técnico        | LISA AI                     | Para definir el motor IA               |
 | Definición de marca         | Lifestyle Intelligence Support Assistant | Una IA personal para tu mejor vida |
->>>>>>> 1c1ee1e ( UI FIRST version, file strucutre, with first ui version.)
+```
