@@ -19,9 +19,16 @@ La app crea un plan integral – profesional, entrenamiento, hobbies, nutrición
 
 ---
 
-## 🚀 Demo
+## 🚀 Demo en acción
 
-(Próximamente disponible) 🔥
+¿Quieres ver cómo funciona **LISA (Lifestyle Intelligence Support Assistant)** en vivo?  
+¡Te mostramos un recorrido rápido en video! 🎥✨
+
+▶️ **Demo disponible en Loom:**  
+[Ver la demostración completa aquí](https://www.loom.com/share/07f9c3e1a29e41f783659ff99834a3e1?sid=84df21b2-8fdf-4e8b-83e6-80c5b1a5205b)
+
+> 🎯 El video cubre la generación de planes, la interacción del chat, y la vista previa de planes inteligentes.
+
 
 ---
 
