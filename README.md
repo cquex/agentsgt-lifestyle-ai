@@ -76,23 +76,32 @@ src/
 
 ---
 
-## ⚡ Ejecución local
+## ⚡ Ejecución local - Docker compose
 
 ```bash
 # 1. Clona el repositorio
 git clone https://github.com/AgentsGT/agentsgt-lifestyle-ai.git
 cd agentsgt-lifestyle-ai
 
-# 2. Instala las dependencias
-npm install
-
-# 3. Crea y configura tus variables de entorno
+# 2. Crea y configura tus variables de entorno
 cp .env.example .env
 # Completa el archivo .env:
 # REACT_APP_OPENAI_API_KEY=...
 
-# 4. Corre la aplicación localmente
-npm start
+# 3. Ejecutar el proyecto con Docker Compose
+docker-compose up --build
+o
+docker compose up --build
+
+4. Acceder a la aplicación
+
+Abre tu navegador y ve a:
+
+http://localhost:3000
+
+✅ Tu aplicación estará funcionando correctamente.
+
+
 ```
 
 ---
