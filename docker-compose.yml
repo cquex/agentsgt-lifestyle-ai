@@ -1,0 +1,11 @@
+services:
+  agentsgt-lifestyle-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_OPENAI_API_KEY=${REACT_APP_OPENAI_API_KEY}
+      - REACT_APP_OPENAI_ASSISTANT_ID=${REACT_APP_OPENAI_ASSISTANT_ID}
+    restart: unless-stopped
