@@ -63,7 +63,6 @@ export class OpenAIService implements ChatService {
   async getMessages(): Promise<Message[]> {
     const threadId = await this.getThreadId();
     const response = await this.client.beta.threads.messages.list(threadId);
-    console.log("Response", response);
     return response.data.map((m) => this.convert(m)).reverse();
   }
 

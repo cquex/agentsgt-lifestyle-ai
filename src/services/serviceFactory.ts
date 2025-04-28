@@ -15,7 +15,6 @@ export const createChatService = (): ChatService => {
 
   const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
   const assistantId = process.env.REACT_APP_OPENAI_ASSISTANT_ID;
-  console.log(`apiKey: ${apiKey}`);
   if (!apiKey) {
     throw new Error("REACT_APP_OPENAI_API_KEY no está configurada.");
   }
